@@ -33,6 +33,7 @@ function renderFacts() {
 
 function renderAgeChart() {
   const container = byId("ageChart");
+  if (!container) return;
   const minAge = 10;
   const maxAge = 50;
   const pct = (age) => ((age - minAge) / (maxAge - minAge)) * 100;
