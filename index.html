@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>When Back Pain Is More Than Back Pain</title>
+    <meta
+      name="description"
+      content="A public awareness data story about ankylosing spondylitis, diagnosis delay, invisible symptoms, and health communication."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="topbar" aria-label="Story navigation">
+        <a href="#top" class="brand">AS Data Story</a>
+        <div class="nav-links">
+          <a href="#diagnosis">Diagnosis Gap</a>
+          <a href="#burden">Daily Burden</a>
+          <a href="#sources">Sources</a>
+        </div>
+      </nav>
+
+      <div class="hero-grid">
+        <section class="hero-copy">
+          <p class="eyebrow">Public health data story</p>
+          <h1>When Back Pain Is More Than Back Pain</h1>
+          <p class="subtitle">
+            A visual explainer about ankylosing spondylitis, an inflammatory condition that can hide behind a common symptom.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#story">Start the story</a>
+            <a class="button secondary" href="#sources">View sources</a>
+          </div>
+        </section>
+
+        <section class="hero-visual" aria-label="Spine and timeline visual">
+          <div class="spine-card">
+            <svg viewBox="0 0 420 520" role="img" aria-label="Abstract spine timeline showing symptom onset and diagnosis path">
+              <defs>
+                <linearGradient id="spineGlow" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0%" stop-color="#00a6a6" />
+                  <stop offset="55%" stop-color="#3b82f6" />
+                  <stop offset="100%" stop-color="#f59e0b" />
+                </linearGradient>
+              </defs>
+              <path class="spine-line" d="M210 52 C160 92 254 134 198 174 C142 214 242 254 196 296 C150 338 244 376 206 424 C185 451 185 474 198 498" />
+              <g id="vertebrae"></g>
+              <line class="age-line" x1="70" y1="455" x2="350" y2="455" />
+              <circle class="age-dot personal" cx="137" cy="455" r="8" />
+              <circle class="age-dot range" cx="323" cy="455" r="8" />
+              <text x="70" y="486">Age 17</text>
+              <text x="116" y="430">20</text>
+              <text x="298" y="430">45</text>
+            </svg>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <section class="personal-note section-wrap" id="story">
+        <div class="note-card">
+          <p class="section-kicker">Personal note</p>
+          <h2>I’m Nate, and I live with ankylosing spondylitis.</h2>
+          <p>
+            When I was 20 years old, I woke up one morning feeling like I had tweaked my neck. But the pain never stopped.
+            Over time, it spread down my spine and became part of my daily life.
+          </p>
+          <p>
+            For years, I tried to find answers through primary care, chiropractors, orthopedists, and physical therapy, but
+            nothing fully explained what was happening. It was not until someone close to me suggested that I might have
+            ankylosing spondylitis that I learned about rheumatology and finally found a path toward relief.
+          </p>
+          <p>
+            Not knowing that rheumatology was even an option delayed my understanding of my own condition. This project uses
+            data visualization and public health research to make ankylosing spondylitis easier to recognize, explain, and
+            understand.
+          </p>
+        </div>
+
+        <aside class="disclaimer" aria-label="Medical disclaimer">
+          <strong>Medical disclaimer:</strong> This project is for public awareness and data storytelling only. It is not
+          medical advice, diagnosis, or treatment guidance. Anyone with persistent pain, stiffness, eye symptoms, or health
+          concerns should speak with a qualified healthcare professional.
+        </aside>
+      </section>
+
+      <section class="section-wrap stats-section" aria-labelledby="fact-title">
+        <div class="section-heading">
+          <p class="section-kicker">Why awareness matters</p>
+          <h2 id="fact-title">A condition that can look ordinary at first</h2>
+          <p>
+            Ankylosing spondylitis can begin as back or hip pain and stiffness, but public sources describe it as an
+            inflammatory disease that may affect the spine, joints, eyes, gut, skin, mobility, and fatigue.
+          </p>
+        </div>
+        <div class="fact-grid" id="factGrid"></div>
+      </section>
+
+      <section class="section-wrap split-section" id="onset">
+        <div class="section-heading">
+          <p class="section-kicker">Age of onset</p>
+          <h2>Young people can be living with an old-sounding disease.</h2>
+          <p>
+            Back pain in young adulthood is often treated like a strain or posture issue. For AS, that assumption can make
+            the earliest clues easier to miss.
+          </p>
+        </div>
+        <div class="viz-panel">
+          <h3>Reported onset window</h3>
+          <div class="age-chart" id="ageChart" aria-label="Age-of-onset chart"></div>
+          <p class="source-note">Sources: NIAMS and Spondylitis Association of America.</p>
+        </div>
+      </section>
+
+      <section class="section-wrap diagnosis-section" id="diagnosis">
+        <div class="section-heading narrow">
+          <p class="section-kicker">The diagnosis gap</p>
+          <h2>Many people do not go straight from symptoms to rheumatology.</h2>
+          <p>
+            AS can be hard to recognize because pain is common, imaging may not show early changes, and no single test
+            confirms the condition. This creates a path where people may collect appointments before they collect answers.
+          </p>
+        </div>
+        <div class="journey" id="journey"></div>
+      </section>
+
+      <section class="section-wrap burden-section" id="burden">
+        <div class="section-heading">
+          <p class="section-kicker">Daily burden</p>
+          <h2>Symptoms are not always visible, but they can shape the day.</h2>
+          <p>
+            Select a symptom area to see how public sources describe the body systems and daily experiences connected to AS.
+          </p>
+        </div>
+
+        <div class="burden-grid">
+          <div class="body-map" aria-label="Interactive symptom map">
+            <svg viewBox="0 0 360 520" role="img" aria-label="Body map highlighting symptom areas">
+              <circle class="body-outline" cx="180" cy="62" r="34" />
+              <path class="body-outline" d="M180 100 C142 128 132 210 142 288 C151 370 145 420 128 493" />
+              <path class="body-outline" d="M180 100 C218 128 228 210 218 288 C209 370 215 420 232 493" />
+              <path class="body-outline" d="M146 150 C105 190 90 260 88 328" />
+              <path class="body-outline" d="M214 150 C255 190 270 260 272 328" />
+              <path class="hotspot spine active" data-area="spine" d="M180 110 C162 170 196 215 174 275 C158 323 184 375 166 440" />
+              <circle class="hotspot eyes" data-area="eyes" cx="180" cy="62" r="16" />
+              <circle class="hotspot fatigue" data-area="fatigue" cx="180" cy="225" r="44" />
+              <path class="hotspot mobility" data-area="mobility" d="M137 355 C168 388 194 389 225 355" />
+              <circle class="hotspot other-joints" data-area="other-joints" cx="105" cy="285" r="18" />
+              <circle class="hotspot other-joints" data-area="other-joints" cx="255" cy="285" r="18" />
+              <circle class="hotspot gut-skin" data-area="gut-skin" cx="180" cy="292" r="28" />
+            </svg>
+          </div>
+
+          <div class="symptom-panel">
+            <div class="symptom-buttons" id="symptomButtons"></div>
+            <div class="symptom-detail" id="symptomDetail"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap invisible-section">
+        <div class="section-heading narrow">
+          <p class="section-kicker">Invisible illness</p>
+          <h2>What people see is not always what the body is carrying.</h2>
+        </div>
+        <div class="compare-grid" id="compareGrid"></div>
+      </section>
+
+      <section class="section-wrap portfolio-section">
+        <div class="section-heading narrow">
+          <p class="section-kicker">Project method</p>
+          <h2>What this project demonstrates</h2>
+          <p>
+            This project combines health communication, source synthesis, structured data, interaction design, and visual
+            storytelling. The goal is not to prove a clinical claim. The goal is to translate reputable public information
+            into a clearer public awareness experience.
+          </p>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span>01</span>
+            <h3>Research synthesis</h3>
+            <p>Gathered public health explanations and converted them into a source-backed story structure.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Structured data</h3>
+            <p>Created small datasets for facts, symptoms, diagnosis journey stages, and invisibility comparisons.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Data visualization</h3>
+            <p>Used interactive visuals to make onset, diagnostic delay, and daily impact easier to understand.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-wrap sources-section" id="sources">
+        <div class="section-heading">
+          <p class="section-kicker">Sources</p>
+          <h2>Sources used in this data story</h2>
+          <p>
+            Source notes are included so readers can distinguish public health facts, reported research summaries, and
+            personal narrative.
+          </p>
+        </div>
+        <div class="source-list" id="sourceList"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Created by Nate Messano as a public awareness data-story portfolio project.</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="data/as_story_data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
