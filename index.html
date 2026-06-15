@@ -109,7 +109,35 @@
         </div>
         <div class="viz-panel">
           <h3>Reported onset window</h3>
-          <div class="age-chart" id="ageChart" aria-label="Age-of-onset chart"></div>
+          <div class="age-chart-static" aria-label="Age-of-onset chart">
+            <div class="age-callouts">
+              <div>
+                <span>Before 17</span>
+                <strong>Earlier symptoms are possible</strong>
+              </div>
+              <div class="personal">
+                <span>Age 20</span>
+                <strong>Nate's symptoms began</strong>
+              </div>
+              <div>
+                <span>Before 45</span>
+                <strong>Most symptoms begin before this age</strong>
+              </div>
+            </div>
+            <div class="age-scale" aria-hidden="true">
+              <div class="age-window"></div>
+              <div class="age-pin start"><span>17</span></div>
+              <div class="age-pin personal"><span>20</span></div>
+              <div class="age-pin end"><span>45</span></div>
+            </div>
+            <div class="age-axis">
+              <span>Age 10</span>
+              <span>Age 20</span>
+              <span>Age 30</span>
+              <span>Age 40</span>
+              <span>Age 50</span>
+            </div>
+          </div>
           <p class="source-note">Sources: NIAMS and Spondylitis Association of America.</p>
         </div>
       </section>

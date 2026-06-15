@@ -327,89 +327,109 @@ svg text {
   margin-bottom: 28px;
 }
 
-.age-chart-card {
-  padding: 6px 4px 2px;
+.age-chart-static {
+  padding-top: 8px;
 }
 
-.age-chart-labels {
-  align-items: end;
+.age-callouts {
   display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr 1.35fr 1fr;
-  margin-bottom: 30px;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 38px;
 }
 
-.age-chart-labels span,
-.age-chart-labels strong {
-  color: var(--muted);
-  font-size: 0.82rem;
+.age-callouts div {
+  background: #f7fafc;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-height: 86px;
+  padding: 14px;
+}
+
+.age-callouts div.personal {
+  background: #fff7ed;
+  border-color: #f5c58d;
+}
+
+.age-callouts span {
+  color: var(--teal);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.age-callouts .personal span {
+  color: var(--gold);
+}
+
+.age-callouts strong {
+  color: var(--ink);
+  display: block;
+  font-size: 0.92rem;
   line-height: 1.3;
 }
 
-.age-chart-labels strong {
-  color: var(--ink);
-}
-
-.age-track {
+.age-scale {
   background: #e7edf4;
   border-radius: 999px;
   height: 20px;
-  margin: 0 16px 28px;
+  margin: 0 20px 32px;
   position: relative;
 }
 
-.age-range {
+.age-window {
   background: linear-gradient(90deg, var(--teal), var(--blue));
   border-radius: 999px;
   height: 20px;
-  left: var(--start);
+  left: 17.5%;
   position: absolute;
-  right: var(--end);
+  right: 12.5%;
   top: 0;
 }
 
-.age-point {
-  left: var(--x);
+.age-pin {
+  background: white;
+  border: 4px solid var(--teal);
+  border-radius: 50%;
+  height: 24px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 24px;
   z-index: 2;
 }
 
-.age-point::before {
-  background: var(--panel);
-  border: 4px solid var(--teal);
-  border-radius: 50%;
-  content: "";
-  display: block;
-  height: 22px;
-  width: 22px;
+.age-pin.start {
+  left: 17.5%;
 }
 
-.age-point.personal::before {
+.age-pin.personal {
   border-color: var(--gold);
-  height: 28px;
-  width: 28px;
+  height: 30px;
+  left: 25%;
+  width: 30px;
 }
 
-.age-point span {
-  background: var(--ink);
-  border-radius: 999px;
-  color: white;
-  font-size: 0.74rem;
+.age-pin.end {
+  left: 87.5%;
+}
+
+.age-pin span {
+  color: var(--ink);
+  font-size: 0.78rem;
   font-weight: 900;
   left: 50%;
-  line-height: 1;
-  padding: 7px 9px;
   position: absolute;
-  top: -42px;
+  top: 28px;
   transform: translateX(-50%);
-  white-space: nowrap;
 }
 
-.age-point.personal span {
-  background: var(--gold);
-  color: var(--ink);
+.age-pin.personal span {
+  color: var(--gold);
+  top: 32px;
 }
 
 .age-axis {
@@ -419,39 +439,6 @@ svg text {
   font-weight: 800;
   justify-content: space-between;
   padding: 0 8px;
-}
-
-.age-legend {
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 22px;
-  font-size: 0.86rem;
-  font-weight: 800;
-  margin-top: 22px;
-  padding-top: 16px;
-}
-
-.age-legend div {
-  align-items: center;
-  display: flex;
-  gap: 8px;
-}
-
-.age-legend i {
-  border-radius: 999px;
-  display: inline-block;
-  height: 11px;
-  width: 28px;
-}
-
-.legend-range {
-  background: linear-gradient(90deg, var(--teal), var(--blue));
-}
-
-.legend-personal {
-  background: var(--gold);
 }
 
 .source-note {
@@ -753,4 +740,3 @@ svg text {
     padding: 6px 7px;
   }
 }
-
