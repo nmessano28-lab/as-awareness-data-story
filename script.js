@@ -38,26 +38,36 @@ function renderAgeChart() {
   const pct = (age) => ((age - minAge) / (maxAge - minAge)) * 100;
   const start = pct(17);
   const end = 100 - pct(45);
-  const markers = storyData.onsetMarkers
-    .map(
-      (marker) => `
-        <div class="age-marker ${marker.type}" style="--x: ${pct(marker.age)}%">
-          <small>${marker.label}</small>
-        </div>
-      `
-    )
-    .join("");
   container.innerHTML = `
-    <div class="age-track">
+    <div class="age-chart-card">
+      <div class="age-chart-labels">
+        <span>Earlier symptoms are possible</span>
+        <strong>Typical onset often falls in young adulthood</strong>
+        <span>Symptoms usually begin before 45</span>
+      </div>
+      <div class="age-track" aria-hidden="true">
       <div class="age-range" style="--start: ${start}%; --end: ${end}%"></div>
-      ${markers}
-    </div>
-    <div class="age-axis">
-      <span>Age 10</span>
-      <span>Age 20</span>
-      <span>Age 30</span>
-      <span>Age 40</span>
-      <span>Age 50</span>
+        <div class="age-point personal" style="--x: ${pct(20)}%">
+          <span>Age 20</span>
+        </div>
+        <div class="age-point range-start" style="--x: ${pct(17)}%">
+          <span>17</span>
+        </div>
+        <div class="age-point range-end" style="--x: ${pct(45)}%">
+          <span>45</span>
+        </div>
+      </div>
+      <div class="age-axis">
+        <span>10</span>
+        <span>20</span>
+        <span>30</span>
+        <span>40</span>
+        <span>50</span>
+      </div>
+      <div class="age-legend">
+        <div><i class="legend-range"></i>Reported public-source onset window</div>
+        <div><i class="legend-personal"></i>Nate's symptom onset</div>
+      </div>
     </div>
   `;
 }
